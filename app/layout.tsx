@@ -2,16 +2,26 @@ import Footer from "@/components/UI/Footer";
 import Navbar from "@/components/UI/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Sans_Condensed } from "next/font/google";
+import {
+  Baloo_Tamma_2,
+  IBM_Plex_Sans,
+  IBM_Plex_Sans_Condensed,
+} from "next/font/google";
 
-const contentFont = IBM_Plex_Sans({
-  variable: "--font-content",
+const bodyFont = IBM_Plex_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
 const headingFont = IBM_Plex_Sans_Condensed({
   variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const logoFont = Baloo_Tamma_2({
+  variable: "--font-logo",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -29,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${contentFont.variable} ${headingFont.variable} antialiased`}
+        className={`${bodyFont.variable} ${headingFont.variable} ${logoFont.variable} antialiased`}
       >
         <Navbar />
         {children}
