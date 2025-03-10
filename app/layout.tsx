@@ -1,15 +1,19 @@
+import Footer from "@/components/UI/Footer";
+import Navbar from "@/components/UI/Navbar";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { IBM_Plex_Sans, IBM_Plex_Sans_Condensed } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const primaryFont = IBM_Plex_Sans({
+  variable: "--font-primary",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const secondaryFont = IBM_Plex_Sans_Condensed({
+  variable: "--font-secondary",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${primaryFont.variable} ${secondaryFont.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
