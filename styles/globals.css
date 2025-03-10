@@ -60,3 +60,7 @@ h5 {
 h6 {
   @apply text-base font-bold;
 }
+
+.animation-on-hover {
+  @apply hover:bg-foreground/5 hover:scale-105 transition-all ease-in-out duration-200;
+}
