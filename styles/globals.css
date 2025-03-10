@@ -4,6 +4,7 @@
   --background: #f7f7f7;
   --foreground: #100303;
   --accent: #43d8c9;
+  --text-icon: 0.9375rem;
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
   --color-accent: var(--accent);
   --font-content: var(--font-content);
   --font-heading: var(--font-heading);
+  --text-icon: var(--text-icon);
 }
 
 @media (prefers-color-scheme: dark) {
