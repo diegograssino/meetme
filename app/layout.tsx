@@ -4,14 +4,14 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Sans_Condensed } from "next/font/google";
 
-const primaryFont = IBM_Plex_Sans({
-  variable: "--font-primary",
+const contentFont = IBM_Plex_Sans({
+  variable: "--font-content",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-const secondaryFont = IBM_Plex_Sans_Condensed({
-  variable: "--font-secondary",
+const headingFont = IBM_Plex_Sans_Condensed({
+  variable: "--font-heading",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${primaryFont.variable} ${secondaryFont.variable} antialiased`}
+        className={`${contentFont.variable} ${headingFont.variable} antialiased`}
       >
         <Navbar />
         {children}
