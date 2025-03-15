@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f7;
-  --foreground: #100303;
-  --accent: #43d8c9;
-  --text-icon: 0.9375rem;
+  --color-background: #f7f7f7;
+  --color-foreground: #100303;
+  --color-accent: #43d8c9;
+  --height-footer: 3rem;
+  --height-navbar: 2;
+  /* --text-icon: 0.9375rem; */
 }
 
 @theme inline {
@@ -14,7 +16,9 @@
   --font-body: var(--font-body);
   --font-heading: var(--font-heading);
   --font-logo: var(--font-logo);
-  --text-icon: var(--text-icon);
+  --text-icon: 0.9375rem;
+  --height-footer: var(--height-footer);
+  --height-navbar: var(--height-navbar);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +30,7 @@
 }
 
 body {
-  @apply flex flex-col min-h-screen bg-background text-foreground font-body;
+  @apply flex flex-col min-h-[calc(100vh+var(--height-footer))] bg-background text-foreground font-body;
 }
 
 h1,

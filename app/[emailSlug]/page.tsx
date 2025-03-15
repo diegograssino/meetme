@@ -1,14 +1,18 @@
 import Container from "@/components/UI/Container";
-import { PageProps } from "@/types/shared";
-import { adaptQueryToAvailability } from "@/utils/query";
+import { Params, SearchParams } from "@/types/shared";
+import { paramsToUser, queryToAvailability } from "@/utils/query";
+
+export interface PageProps {
+  params?: Promise<Params>;
+  searchParams?: Promise<SearchParams>;
+}
 
 const ReadPage = async ({ params, searchParams }: PageProps) => {
-  const user = await params;
+  const paramData = (await params) as Params;
+  const user = await paramsToUser(paramData.emailSlug);
+
   const queryData = await searchParams;
-  // console.log(encodeURIComponent("sun=[]&mon=[8,9]&mon=[12.13]"));
-  const availability = adaptQueryToAvailability(
-    queryData?.availability as string
-  );
+  const availability = queryToAvailability(queryData?.availability as string);
 
   return (
     <Container className="w-full" as="main">

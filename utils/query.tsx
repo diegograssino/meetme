@@ -10,7 +10,7 @@ export const availabilityTemplate: AvailabilityTemplate = {
   sat: { id: 5, key: "sat", name: "Saturday", unavailableOn: [] },
 };
 
-export const adaptQueryToAvailability = (query: string): Availability[] => {
+export const queryToAvailability = (query: string): Availability[] => {
   const availabilityObject = availabilityTemplate;
 
   decodeURIComponent(query as string)
@@ -29,4 +29,9 @@ export const adaptQueryToAvailability = (query: string): Availability[] => {
   );
 
   return availability;
+};
+export const paramsToUser = async (param: string) => {
+  const user = await decodeURIComponent(param);
+
+  return await user;
 };

@@ -3,7 +3,7 @@ import Container from "../Container";
 
 const Navbar = () => {
   return (
-    <nav className="py-2 mb-4 sticky z-30 border-b border-accent">
+    <nav className="py-2 mb-4 sticky z-30 border-b border-accent h-navbar">
       <Container className="flex justify-between items-center">
         <h6 className="text-xl! text-accent hover:cursor-pointer font-logo! flex gap-[2px] items-center">
           <CalendarIcon width={"1.25rem"} />
