@@ -19,7 +19,7 @@ const Footer = () => {
                 <HeartFilledIcon width={12} />
               </span>
               <span>by</span>
-              <span className="font-bold">turbodisk</span>
+              <span className="font-bold">Diego Grassino</span>
             </p>
           </div>
           <div className="flex items-center gap-3">
