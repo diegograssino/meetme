@@ -9,9 +9,9 @@ import Container from "../Container";
 const Footer = () => {
   return (
     <div className="mt-auto">
-      <div className="h-4" />
-      <footer className="text-xs border-t border-accent h-footer">
-        <Container className="py-4 flex justify-between items-center gap-1">
+      <div className="h-4"></div>
+      <footer className="text-xs border-t border-accent">
+        <Container className="py-4 h-footer flex justify-between items-center gap-1">
           <div className="flex items-center gap-3">
             <p className="flex flex-row justify-center gap-1">
               <span>Made with</span>

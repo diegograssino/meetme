@@ -4,8 +4,10 @@
   --color-background: #f7f7f7;
   --color-foreground: #100303;
   --color-accent: #43d8c9;
-  --height-footer: 3rem;
-  --height-navbar: 2;
+  --height-footer: 4rem;
+  --height-navbar: 3rem;
+  --gap-sections: 1rem;
+  --height-user-section: 4rem;
   /* --text-icon: 0.9375rem; */
 }
 
@@ -19,6 +21,8 @@
   --text-icon: 0.9375rem;
   --height-footer: var(--height-footer);
   --height-navbar: var(--height-navbar);
+  --gap-sections: var(--gap-sections);
+  --height-user-section: var(--height-user-section);
 }
 
 @media (prefers-color-scheme: dark) {
