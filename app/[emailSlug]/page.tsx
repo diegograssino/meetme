@@ -1,5 +1,5 @@
 import Container from "@/components/UI/Container";
-import { Grid } from "@/components/UI/Grid";
+import GridTemplate, { GridArea } from "@/components/UI/GridTemplate";
 import { Params, SearchParams } from "@/types/shared";
 import { paramsToUser, queryToAvailability } from "@/utils/query";
 
@@ -17,26 +17,32 @@ const ReadPage = async ({ params, searchParams }: PageProps) => {
 
   return (
     <Container className="w-full" as="main">
-      <Grid
+      <GridTemplate
         templateAreas={`"user" "calendar"`}
-        cols={1}
+        config={{ cols: 1, gap: 4 }}
+        responsive={{
+          sm: { cols: 1, gap: 4 },
+          md: { cols: 1, gap: 4 },
+          lg: { cols: 1, gap: 4 },
+          xl: { cols: 1, gap: 4 },
+        }}
         className="gap-sections"
       >
-        <Grid.Area
+        <GridArea
           area="user"
           as="aside"
           className="h-user-section border-2 border-foreground"
         >
           User
-        </Grid.Area>
-        <Grid.Area
+        </GridArea>
+        <GridArea
           area="calendar"
           as="section"
           className="h-[calc(100vh-var(--height-navbar)-var(--height-user-section)-(var(--gap-sections)*3))] border-2 border-foreground"
         >
           Calendar
-        </Grid.Area>
-      </Grid>
+        </GridArea>
+      </GridTemplate>
     </Container>
   );
 };
