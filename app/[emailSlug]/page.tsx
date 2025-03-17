@@ -1,5 +1,5 @@
 import Container from "@/components/UI/Container";
-import GridTemplate, { GridArea } from "@/components/UI/GridTemplate";
+import GridArea from "@/components/UI/GridArea";
 import { Params, SearchParams } from "@/types/shared";
 import { paramsToUser, queryToAvailability } from "@/utils/query";
 
@@ -17,32 +17,24 @@ const ReadPage = async ({ params, searchParams }: PageProps) => {
 
   return (
     <Container className="w-full" as="main">
-      <GridTemplate
-        templateAreas={`"user" "calendar"`}
-        config={{ cols: 1, gap: 4 }}
-        responsive={{
-          sm: { cols: 1, gap: 4 },
-          md: { cols: 1, gap: 4 },
-          lg: { cols: 1, gap: 4 },
-          xl: { cols: 1, gap: 4 },
-        }}
-        className="gap-sections"
+      <div
+        className="grid grid-cols-3 gap-sections grid-template-read"
       >
         <GridArea
           area="user"
           as="aside"
-          className="h-user-section border-2 border-foreground"
+          className="h-user-section tablet:h-[calc(100vh-var(--height-navbar))-(var(--gap-sections)*3))] desktop:h-[calc(100vh-var(--height-navbar))-(var(--gap-sections)*3))] border-2 border-foreground"
         >
           User
         </GridArea>
         <GridArea
           area="calendar"
           as="section"
-          className="h-[calc(100vh-var(--height-navbar)-var(--height-user-section)-(var(--gap-sections)*3))] border-2 border-foreground"
+          className="h-[calc(100vh-var(--height-navbar)-var(--height-user-section)-(var(--gap-sections)*3))] desktop:h-[calc(100vh-var(--height-navbar))-(var(--gap-sections)*3))] border-2 border-foreground"
         >
           Calendar
         </GridArea>
-      </GridTemplate>
+      </div>
     </Container>
   );
 };

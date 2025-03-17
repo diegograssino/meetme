@@ -24,12 +24,12 @@
   --height-navbar: var(--height-navbar);
   --gap-sections: var(--gap-sections);
   --height-user-section: var(--height-user-section);
-  /* TODO Insert values via var on the component */
-  /* --breakpoint-xs: 30rem; //480x800
-  --breakpoint-md: 48rem; // 768x1024
-  --breakpoint-lg: 64rem; // 1024x768
-  --breakpoint-xl: 80rem; // 1280x900
-  --breakpoint-2xl: 90rem; // 1440x900 */
+  /* 360x800 */
+  --breakpoint-mobile: 22.5rem;
+  /* 768x1024 */
+  --breakpoint-tablet: 48rem;
+  /* // 1920x1080 */
+  --breakpoint-desktop: 120rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,4 +79,31 @@ h6 {
 
 .animation-on-hover {
   @apply hover:bg-foreground/5 hover:scale-105 transition-all ease-in-out duration-100;
+}
+
+/* mobile */
+@media (max-width: 360px) {
+  .grid-template-read {
+    grid-template-areas:
+      "user user user"
+      "calendar calendar calendar";
+  }
+}
+
+/* tablet */
+@media (min-width: 360px) and (max-width: 768px) {
+  .grid-template-read {
+    grid-template-areas:
+      "user user user"
+      "calendar calendar calendar";
+  }
+}
+
+/* desktop */
+@media (min-width: 768px) and (max-width: 1920px) {
+  .grid-template-read {
+    grid-template-areas:
+      "user calendar calendar"
+      "user calendar calendar";
+  }
 }
