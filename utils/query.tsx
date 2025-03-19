@@ -10,10 +10,12 @@ export const availabilityTemplate: AvailabilityTemplate = {
   sat: { id: 5, key: "sat", name: "Saturday", unavailableOn: [] },
 };
 
-export const queryToAvailability = (query: string): Availability[] => {
+export const queryToAvailability = async (
+  query: string
+): Promise<Availability[]> => {
   const availabilityObject = availabilityTemplate;
 
-  decodeURIComponent(query as string)
+  await decodeURIComponent(query as string)
     .split("&")
     .forEach((param) => {
       const data = param.split("=");
@@ -30,8 +32,8 @@ export const queryToAvailability = (query: string): Availability[] => {
 
   return availability;
 };
-export const paramsToUser = async (param: string) => {
-  const user = await decodeURIComponent(param);
+export const paramsToUser = (param: string) => {
+  const user = decodeURIComponent(param);
 
-  return await user;
+  return user;
 };

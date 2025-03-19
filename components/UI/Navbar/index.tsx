@@ -1,20 +1,20 @@
-import { CalendarIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
-import Container from "../Container";
+import { CalendarIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
+import Container from '../Container'
 
 const Navbar = () => {
   return (
-    <nav className="py-2 mb-4 sticky z-30 border-b border-accent h-navbar">
-      <Container className="flex justify-between items-center">
-        <h6 className="text-xl! text-accent hover:cursor-pointer font-logo! flex gap-[2px] items-center">
-          <CalendarIcon width={"1.25rem"} />
+    <nav className="sticky z-30 mb-4 h-navbar border-b border-accent py-2">
+      <Container className="flex items-center justify-between">
+        <h6 className="flex items-center gap-[2px] font-logo! text-xl! text-accent hover:cursor-pointer">
+          <CalendarIcon width={'1.25rem'} />
           <span className="pt-1">MeetMe</span>
         </h6>
-        <button className="animation-on-hover py-1 px-2 rounded cursor-pointer ">
+        <button className="animation-on-hover cursor-pointer rounded px-2 py-1">
           <HamburgerMenuIcon />
         </button>
       </Container>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

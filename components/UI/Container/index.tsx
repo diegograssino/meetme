@@ -1,17 +1,18 @@
-import { ElementType, HTMLAttributes } from "react";
+import clsx from 'clsx/lite'
+import { ElementType, HTMLAttributes } from 'react'
 
 export interface Props extends HTMLAttributes<HTMLOrSVGElement> {
-  as?: ElementType;
+  as?: ElementType
 }
-const Container = ({ children, as: Tag = "div", ...otherProps }: Props) => {
+const Container = ({ children, as: Tag = 'div', ...otherProps }: Props) => {
   return (
     <Tag
       {...otherProps}
-      className={`max-w-[1280px] mx-auto px-5 ${otherProps.className || ""}`}
+      className={clsx('mx-auto max-w-[1280px] px-5', otherProps.className)}
     >
       {children}
     </Tag>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container

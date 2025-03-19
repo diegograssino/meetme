@@ -80,30 +80,3 @@ h6 {
 .animation-on-hover {
   @apply hover:bg-foreground/5 hover:scale-105 transition-all ease-in-out duration-100;
 }
-
-/* mobile */
-@media (max-width: 360px) {
-  .grid-template-read {
-    grid-template-areas:
-      "user user user"
-      "calendar calendar calendar";
-  }
-}
-
-/* tablet */
-@media (min-width: 360px) and (max-width: 768px) {
-  .grid-template-read {
-    grid-template-areas:
-      "user user user"
-      "calendar calendar calendar";
-  }
-}
-
-/* desktop */
-@media (min-width: 768px) and (max-width: 1920px) {
-  .grid-template-read {
-    grid-template-areas:
-      "user calendar calendar"
-      "user calendar calendar";
-  }
-}
