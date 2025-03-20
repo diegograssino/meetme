@@ -1,9 +1,5 @@
-import Container from "@/components/UI/Container";
+import Home from "@/pages/Home";
 
-export default function Home() {
-  return (
-    <Container className="w-full" as="main">
-      <h1>Home</h1>
-    </Container>
-  );
+export default function HomePage() {
+  return <Home />;
 }

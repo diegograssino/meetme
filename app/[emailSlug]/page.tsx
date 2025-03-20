@@ -1,6 +1,6 @@
-import CalendarPanel from "@/components/shared/CalendarPanel";
-import UserPanel from "@/components/shared/UserPanel";
-import Container from "@/components/UI/Container";
+import CalendarPanel from "@/features/calendar/UI/CalendarPanel";
+import UserPanel from "@/features/calendar/UI/UserPanel";
+import Container from "@/features/UI/Container";
 import { Params, SearchParams } from "@/types/shared";
 import { paramsToUser, queryToAvailability } from "@/utils/query";
 
