@@ -11,7 +11,9 @@ const UserPanel = ({ user, createdAt }: Props) => {
           <tbody className="[&>tr>*]:p-1 [&>tr>*]:text-start [&>tr>td]:pl-2 [&>tr>th]:w-30 [&>tr>th]:border-[.25rem] [&>tr>th]:bg-foreground [&>tr>th]:font-heading [&>tr>th]:text-background">
             <tr>
               <th>From:</th>
-              <td>{user}</td>
+              <td>
+                <span className="text-xl font-bold">{user}</span>
+              </td>
             </tr>
             <tr>
               <th>Created at:</th>
