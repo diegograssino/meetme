@@ -1,4 +1,4 @@
-import Create from "@/pages/Create";
+import Create from "@/features/pages/ui/create";
 
 const CreatePage = () => {
   return <Create />;

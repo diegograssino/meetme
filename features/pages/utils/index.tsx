@@ -1,4 +1,4 @@
-import { Availability, AvailabilityTemplate, Days } from "@/types/availability";
+import { Availability, AvailabilityTemplate, Days } from "@/features/calendar/types";
 
 export const availabilityTemplate: AvailabilityTemplate = {
   sun: { id: 0, key: "sun", name: "Sunday", unavailableOn: [] },

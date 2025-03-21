@@ -1,6 +1,6 @@
-import CalendarPanel from "@/features/calendar/UI/CalendarPanel";
-import UserPanel from "@/features/calendar/UI/UserPanel";
-import Container from "@/features/UI/Container";
+import CalendarPanel from "@/features/calendar/ui/calendar-panel";
+import UserPanel from "@/features/calendar/ui/user-panel";
+import Container from "@/features/ui/Container";
 
 const Create = () => {
   return (

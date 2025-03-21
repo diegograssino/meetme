@@ -1,4 +1,4 @@
-import { Availability } from '@/types/availability'
+import { Availability } from '@/features/calendar/types/availability'
 
 interface Props {
   availability: Availability[]

@@ -1,11 +1,11 @@
-import Footer from "@/features/UI/Footer";
-import Navbar from "@/features/UI/Navbar";
+import Footer from "@/features/ui/Footer";
+import Navbar from "@/features/ui/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import {
-  Baloo_Tamma_2,
-  IBM_Plex_Sans,
-  IBM_Plex_Sans_Condensed,
+    Baloo_Tamma_2,
+    IBM_Plex_Sans,
+    IBM_Plex_Sans_Condensed,
 } from "next/font/google";
 
 const bodyFont = IBM_Plex_Sans({
