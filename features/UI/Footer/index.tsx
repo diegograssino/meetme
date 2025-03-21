@@ -4,7 +4,7 @@ import {
   LinkedInLogoIcon,
 } from '@radix-ui/react-icons'
 import Link from 'next/link'
-import Container from '../Container'
+import Container from '../container'
 
 const Footer = () => {
   return (

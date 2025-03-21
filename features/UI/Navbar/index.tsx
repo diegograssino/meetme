@@ -1,5 +1,5 @@
 import { CalendarIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
-import Container from '../Container'
+import Container from '../container'
 
 const Navbar = () => {
   return (

@@ -1,4 +1,4 @@
-import Footer from "@/features/ui/Footer";
+import Footer from "@/features/ui/footer";
 import Navbar from "@/features/ui/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";

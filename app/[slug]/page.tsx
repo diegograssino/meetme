@@ -2,7 +2,7 @@ import CalendarPanel from "@/features/calendar/ui/calendar-panel";
 import UserPanel from "@/features/calendar/ui/user-panel";
 import { Params, SearchParams } from "@/features/pages/types";
 import { paramsToUser, queryToAvailability } from "@/features/pages/utils";
-import Container from "@/features/UI/Container";
+import Container from "@/features/ui/container";
 
 export interface PageProps {
   params?: Promise<Params>;

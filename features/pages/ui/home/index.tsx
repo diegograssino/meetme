@@ -1,4 +1,4 @@
-import Container from "@/features/UI/Container";
+import Container from "@/features/ui/container";
 
 const Home = () => {
   return (
